@@ -1,0 +1,31 @@
+<ion-header >
+  <ion-toolbar  color="primary">
+    <ion-title><ion-icon routerLink='/login'  name="bonfire" style="zoom:1.5;"></ion-icon> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+    <ion-card >
+        <ion-card-title text-center color="primary">Login</ion-card-title>
+        <ion-list lines="full" class="ion-no-margin ion-no-padding" >
+          <ion-item >
+            <ion-label position="stacked">Email <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text"  [(ngModel)]="email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text"  [(ngModel)]="password"></ion-input>
+          </ion-item>
+
+        
+        </ion-list>
+      </ion-card>
+        <div class="ion-padding">
+          <ion-button routerLink='/home' expand="block" type="submit" class="ion-no-margin" (click)="login() ">Sign in</ion-button> 
+       
+        </div>
+        <ion-button  routerLink='/register'>Register</ion-button><br/>
+        <ion-button (click)=resetPassword()>Forgot Password</ion-button>
+</ion-content>
